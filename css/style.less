@@ -1,0 +1,186 @@
+/*   
+ * Version: 1.1
+ * Author: Nathan Rosenberg
+*/
+
+@import "mixins.less";
+@import "colors.less";
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    color: @bodyText;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
+
+.wraper,
+.container {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    .transition(all .1s ease-in-out);
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-continue {
+    z-index: 1000;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    display: block;
+    top: -25px;
+    left: calc(~'50% - 20px');
+    padding-top: -25px;
+    background: @heart;
+    border-radius: 50%;
+    border: 6px solid #f0f0f0;
+    color: #fff;
+    &:hover {
+        color: #333;
+    }
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+.header {
+    height: calc(100% - 50%);
+    background: #03A9F4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .mask {
+        padding-left: 50px;
+        padding-top: 100px;
+        height: 100%;
+        background: url(/img/nick-b.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        .head1 {
+            padding: 5px 10px;
+            background: #fff;
+            display: inline;
+            color: #4BA0FF;
+            font-weight: 300;
+            font-size: 40px;
+        }
+        .head2 {
+            //            text-align: right;
+            display: inline;
+            color: #fff;
+            font-weight: 200;
+            font-size: 40px;
+        }
+        .head3 {
+            display: inline;
+            color: #fff;
+            font-weight: 200;
+            font-size: 70px;
+        }
+    }
+}
+
+.skills {
+    background: #f0f0f0;
+    margin-top: -52px;
+    padding: 3px;
+    color: @white;
+    .container {
+        width: 100%;
+    }
+    .p1 {
+        height: 40em;
+    }
+    .half {
+        height: 50%;
+    }
+    .full {
+        height: 100%;
+    }
+    .linux {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #4CAF50;
+        height: 100%;
+        border: 3px solid #f0f0f0;
+        h2 {
+            font-size: 80px;
+            font-weight: 200;
+        }
+    }
+    .admin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #009688;
+        height: 100%;
+        border: 3px solid #f0f0f0;
+        h2 {
+            font-size: 60px;
+            font-weight: 200;
+        }
+    }
+    .systems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FF9800;
+        height: 100%;
+        border: 3px solid #f0f0f0;
+        h2 {
+            font-size: 60px;
+            font-weight: 200;
+        }
+    }
+    .entrep {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F44336;
+        height: 100%;
+        border: 3px solid #f0f0f0;
+        h2 {
+            font-size: 60px;
+            font-weight: 200;
+        }
+    }
+    .bj {
+        background: url(/img/bj.jpg);
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #f0f0f0;
+    }
+    .rh {
+        background: url(/img/portfolio_02.jpg);
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border: 3px solid #f0f0f0;
+    }
+}
+
+.contact {
+    padding: 50px 0;
+    background: #3F51B5;
+    color: @white;
+}
