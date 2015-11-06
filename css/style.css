@@ -348,6 +348,7 @@ a:focus {
   -moz-box-shadow: none;
   box-shadow: none;
   background: #444;
+  color: #ffffff;
 }
 .contact input[type="email"] {
   background: #444;
@@ -357,6 +358,7 @@ a:focus {
   height: 50px;
   border: none;
   transition: 0.3s;
+  color: #ffffff;
 }
 .contact textarea {
   background: #444;
@@ -365,6 +367,7 @@ a:focus {
   font-size: 18px;
   border: none;
   transition: 0.3s;
+  color: #ffffff;
 }
 .contact .btn-primary {
   margin-top: 6px;
@@ -390,4 +393,8 @@ a:focus {
   background: #e9573f;
   color: #ffffff;
   text-align: center;
+}
+.footer a {
+  color: #ffffff;
+  font-weight: 500;
 }
