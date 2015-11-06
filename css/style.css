@@ -276,7 +276,7 @@ a:focus {
   font-weight: 200;
 }
 .skills .bj {
-  background: url(/img/bj.jpg);
+  background: url(../img/bj.jpg);
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -288,7 +288,7 @@ a:focus {
   opacity: 100;
 }
 .skills .rh {
-  background: url(/img/portfolio_02.jpg);
+  background: url(../img/portfolio_02.jpg);
   padding: 0;
   height: 100%;
   background-size: cover;
@@ -368,6 +368,9 @@ a:focus {
   border: none;
   transition: 0.3s;
   color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .contact .btn-primary {
   margin-top: 6px;
