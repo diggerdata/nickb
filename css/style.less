@@ -19,11 +19,16 @@ body {
     height: 100%;
 }
 
+p,
 h1,
 h2,
 h3,
 h4 {
     padding: 0;
+    margin: 0;
+}
+
+ul {
     margin: 0;
 }
 
@@ -35,7 +40,7 @@ a {
 }
 
 .btn-continue {
-    z-index: 1000;
+    z-index: 1001;
     width: 52px;
     height: 52px;
     position: relative;
@@ -43,12 +48,38 @@ a {
     top: -25px;
     left: calc(~'50% - 20px');
     padding-top: -25px;
-    background: @heart;
+    background: #2F70B4;
     border-radius: 50%;
-    border: 6px solid #f0f0f0;
+    border: 6px solid #f2f2f2;
     color: #fff;
     &:hover {
-        color: #333;
+        color: #eee;
+    }
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+.btn-continue-up {
+    z-index: 1001;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    display: block;
+    top: 25px;
+    left: calc(~'50% - 20px');
+    padding-top: -25px;
+    background: #2F70B4;
+    border-radius: 50%;
+    border: 6px solid #f2f2f2;
+    color: #fff;
+    &:hover {
+        color: #eee;
     }
     i {
         display: flex;
@@ -61,53 +92,110 @@ a {
 }
 
 .header {
-    height: calc(100% - 50%);
-    background: #03A9F4;
+    z-index: 1001;
+    position: relative;
+    background: @red;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    .mask {
-        padding-left: 50px;
+    .about-me {
+        padding-left: 100px;
         padding-top: 100px;
         height: 100%;
-        background: url(/img/nick-b.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
         .head1 {
             padding: 5px 10px;
             background: #fff;
             display: inline;
-            color: #4BA0FF;
+            color: @red;
             font-weight: 300;
-            font-size: 40px;
+            font-size: 50px;
         }
         .head2 {
             //            text-align: right;
             display: inline;
             color: #fff;
             font-weight: 200;
-            font-size: 40px;
+            font-size: 50px;
         }
         .head3 {
             display: inline;
             color: #fff;
             font-weight: 200;
-            font-size: 70px;
+            font-size: 90px;
+        }
+        .soc-buttons {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 7px;
+            .soc-btn {
+                width: 35px;
+                height: 35px;
+                position: relative;
+                display: inline-block;
+                transition: all .1s ease-in-out;
+                margin-right: 3px;
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: @white;
+                }
+                &:active {
+                    .box-shadow(none);
+                }
+            }
+            .facebook {
+                background: #3864A3;
+                &:hover {
+                    background: darken(#3864A3, 5%);
+                }
+            }
+            .twitter {
+                background: #55ACEE;
+                &:hover {
+                    background: darken(#55ACEE, 5%);
+                }
+            }
+            .linkedin {
+                background: #0177B5;
+                &:hover {
+                    background: darken(#0177B5, 5%);
+                }
+            }
+        }
+    }
+    .profile {
+        img {
+            display: block;
+            margin: auto;
         }
     }
 }
 
-.skills {
-    background: #f0f0f0;
+.about {
     margin-top: -52px;
-    padding: 3px;
+    background: #f2f2f2;
+    padding: 60px 0;
+    .me {
+        margin-bottom: 30px;
+        font-weight: 300;
+        font-size: 40px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.skills {
+    background: #f2f2f2;
     color: @white;
     .container {
         width: 100%;
     }
     .p1 {
-        height: 40em;
+        height: 35em;
     }
     .half {
         height: 50%;
@@ -121,7 +209,7 @@ a {
         align-items: center;
         background: #4CAF50;
         height: 100%;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
         h2 {
             font-size: 80px;
             font-weight: 200;
@@ -133,7 +221,7 @@ a {
         align-items: center;
         background: #009688;
         height: 100%;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
         h2 {
             font-size: 60px;
             font-weight: 200;
@@ -145,7 +233,7 @@ a {
         align-items: center;
         background: #FF9800;
         height: 100%;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
         h2 {
             font-size: 60px;
             font-weight: 200;
@@ -157,7 +245,7 @@ a {
         align-items: center;
         background: #F44336;
         height: 100%;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
         h2 {
             font-size: 60px;
             font-weight: 200;
@@ -168,19 +256,104 @@ a {
         height: 100%;
         background-size: cover;
         background-position: center;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
     }
     .rh {
         background: url(/img/portfolio_02.jpg);
         height: 100%;
         background-size: cover;
         background-position: center;
-        border: 3px solid #f0f0f0;
+        border: 3px solid #f2f2f2;
     }
 }
 
 .contact {
-    padding: 50px 0;
-    background: #3F51B5;
+    margin-bottom: -52px;
+    padding: 70px 0;
+    background: #f2f2f2;
+    
+    h3 {
+        font-size: 40px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    strong {
+        font-size: 18px;
+    }
+    a {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .inline {
+        display: inline;
+    }
+    .col-md-6,
+    .col-md-12 {
+        margin: 0;
+        padding: 0;
+    }
+    .email {
+        padding-left: 3px;
+        margin-bottom: 6px;
+    }
+    .name {
+        padding-right: 3px;
+        margin-bottom: 6px;
+    }
+    input[type="text"] {
+        padding: 10px;
+        border-radius: 0;
+        font-size: 18px;
+        height: 50px;
+        border: none;
+        transition: 0.3s;
+        .box-shadow(none);
+        background: #444;
+    }
+    input[type="email"] {
+        background: #444;
+        padding: 10px;
+        border-radius: 0;
+        font-size: 18px;
+        height: 50px;
+        border: none;
+        transition: 0.3s;
+    }
+    textarea {
+        background: #444;
+        padding: 10px;
+        border-radius: 0;
+        font-size: 18px;
+        //            height: 50px;
+        border: none;
+        transition: 0.3s;
+    }
+    .btn-primary {
+        margin-top: 6px;
+        width: 100%;
+        height: 50px;
+        border-radius: 0;
+        font-size: 18px;
+        background: @blue;
+        .transition(all .1s ease-in-out);
+        border: none;
+        &:hover {
+            background: darken(@blue, 5%);
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0 20px 0;
+    background: @red;
     color: @white;
+    text-align: center;
 }
