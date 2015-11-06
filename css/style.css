@@ -33,7 +33,9 @@ a {
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
 }
-a:hover {
+a:hover,
+a:active,
+a:focus {
   text-decoration: none;
 }
 .btn-continue {
@@ -196,6 +198,35 @@ a:hover {
 .skills .full {
   height: 100%;
 }
+.skills .overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all .3s;
+  position: relative;
+}
+.skills .overlay:hover {
+  cursor: pointer;
+}
+.skills .overlay-content {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: auto;
+  background: #e9573f;
+  padding: 1em;
+  color: #eee;
+}
+.skills .overlay-content h3 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.skills .overlay-content p {
+  font-size: 16px;
+  font-weight: 300;
+}
 .skills .linux {
   display: flex;
   justify-content: center;
@@ -250,13 +281,23 @@ a:hover {
   background-size: cover;
   background-position: center;
   border: 3px solid #f2f2f2;
+  overflow: hidden;
+  padding: 0;
+}
+.skills .bj:hover .overlay {
+  opacity: 100;
 }
 .skills .rh {
   background: url(/img/portfolio_02.jpg);
+  padding: 0;
   height: 100%;
   background-size: cover;
   background-position: center;
   border: 3px solid #f2f2f2;
+  overflow: hidden;
+}
+.skills .rh:hover .overlay {
+  opacity: 100;
 }
 .contact {
   margin-bottom: -52px;

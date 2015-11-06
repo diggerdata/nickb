@@ -34,7 +34,9 @@ ul {
 
 a {
     .transition(all .1s ease-in-out);
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         text-decoration: none;
     }
 }
@@ -203,6 +205,35 @@ a {
     .full {
         height: 100%;
     }
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .2);
+        opacity: 0;
+        transition: all .3s;
+        position: relative;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .overlay-content {
+        position: absolute;
+        bottom: 0;
+        width: 60%;
+        height: auto;
+        background: @red;
+        padding: 1em;
+        color: #eee;
+        h3 {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
     .linux {
         display: flex;
         justify-content: center;
@@ -257,13 +288,27 @@ a {
         background-size: cover;
         background-position: center;
         border: 3px solid #f2f2f2;
+        overflow: hidden;
+        padding: 0;
+        &:hover {
+            .overlay {
+                opacity: 100;
+            }
+        }
     }
     .rh {
         background: url(/img/portfolio_02.jpg);
+        padding: 0;
         height: 100%;
         background-size: cover;
         background-position: center;
         border: 3px solid #f2f2f2;
+        overflow: hidden;
+        &:hover {
+            .overlay {
+                opacity: 100;
+            }
+        }
     }
 }
 
@@ -271,7 +316,6 @@ a {
     margin-bottom: -52px;
     padding: 70px 0;
     background: #f2f2f2;
-    
     h3 {
         font-size: 40px;
         font-weight: 300;
