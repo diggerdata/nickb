@@ -39,7 +39,6 @@ a:focus {
   text-decoration: none;
 }
 .btn-continue {
-  z-index: 1001;
   width: 52px;
   height: 52px;
   position: relative;
@@ -64,7 +63,6 @@ a:focus {
   font-size: 20px;
 }
 .btn-continue-up {
-  z-index: 1001;
   width: 52px;
   height: 52px;
   position: relative;
@@ -89,7 +87,6 @@ a:focus {
   font-size: 20px;
 }
 .header {
-  z-index: 1001;
   position: relative;
   background: #e9573f;
   background-size: cover;
